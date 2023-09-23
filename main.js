@@ -38,6 +38,10 @@ const largestPair = function (array) {
 };
 
 //Problem 5
+const removeParenth = function (str) {
+    let noParenth = str.replace(/\(.*?\)/g, '');
+    return noParenth;
+};
 
 
 //Problem 6
