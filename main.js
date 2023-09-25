@@ -41,7 +41,7 @@ const isPalindrome = function (str) {
     let forwardWord = str.toLowerCase();
     let backwardWord = str.toLowerCase().split("").reverse().join("");
 
-    if forwardWord === backwardWord {
+    if (forwardWord === backwardWord) {
         return true;
     }
     else {
