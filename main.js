@@ -25,9 +25,9 @@ const findFrequency = function (array) {
 
     for (let key in arrayFrequence) {
         if (arrayFrequence[key] === minValue) {
-            leastFrequent = `${key}`
+            leastFrequent = `${key}`;
         } else if (arrayFrequence[key] === maxValue) {
-            mostFrequent = `${key}`
+            mostFrequent = `${key}`;
         }
     }
 
