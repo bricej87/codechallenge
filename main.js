@@ -6,7 +6,34 @@ const findSum = function (array) {
 };
 
 //Problem 2
+const findFrequency = function (array) {
+    let arrayFrequence = {};
 
+    for (let i = 0; i < array.length; i++) {
+        if (arrayFrequence[array[i]]) {
+            arrayFrequence[array[i]]++;
+        } else {
+            arrayFrequence[array[i]] = 1;
+        }
+    }
+
+    let arrayValue = Object.values(arrayFrequence);
+    let maxValue = Math.max(...arrayValue);
+    let minValue = Math.min(...arrayValue);
+    let leastFrequent = "";
+    let mostFrequent = "";
+
+    for (let key in arrayFrequence) {
+        if (arrayFrequence[key] === minValue) {
+            leastFrequent = `${key}`
+        } else if (arrayFrequence[key] === maxValue) {
+            mostFrequent = `${key}`
+        }
+    }
+
+    return { most: `${mostFrequent}`, least: `${leastFrequent}` }
+
+};
 
 
 //Problem 3
@@ -16,6 +43,9 @@ const isPalindrome = function (str) {
 
     if forwardWord === backwardWord {
         return true;
+    }
+    else {
+        return false;
     }
 
 };
